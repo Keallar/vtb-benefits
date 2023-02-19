@@ -1,0 +1,26 @@
+.profile {
+  margin-top: 60px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.profile__row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.profile__col {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.tile {
+  margin: 5px;
+  border: 2px solid #EEF1FF;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing:border-box;
+	display: inline-block;
+  box-shadow: 0px 4px 4px #EEF1FF;
+}

@@ -1,0 +1,21 @@
+.ntf_collections {
+  min-width: 650px
+}
+
+.ntf_collections_first_row {
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.nft_collection__exchange {
+  color: #1538F5;
+  font-size: 16px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.collections_container {
+  display: flex;
+  flex-flow: row wrap;
+}

@@ -1,0 +1,16 @@
+.events {
+  h3 {
+    font-weight: 400;
+    margin-bottom: 19px;
+    margin: 18px 0px;
+  }
+
+  margin-bottom: 70px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+}

@@ -1,0 +1,55 @@
+version: '3.5'
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+    networks:
+      - gamification_network
+
+  backend:
+    build: ./backend
+    command: "bundle exec rails s -b 0.0.0.0"
+    env_file: .env.development
+    volumes:
+      - ./backend:/usr/src
+      - nfts:/usr/src/storage
+    stdin_open: true
+    depends_on:
+      - "db"
+    networks:
+      - gamification_network
+
+
+  frontend:
+    build: ./frontend
+    command: yarn start
+    volumes:
+      - ./frontend:/app
+    networks:
+      - gamification_network
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - nfts:/storage
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - gamification_network
+
+volumes:
+  postgresql:
+  nfts:
+
+networks:
+  gamification_network:
+    name: gamification

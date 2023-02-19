@@ -1,0 +1,32 @@
+$bg-img: url('../../../../../assets/images/collection_background.png');
+
+.collection {
+  height: 140px;
+  width: 140px;
+  background-image: $bg-img;
+  cursor: pointer;
+}
+
+.collection__container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.collection__counter {
+  height: 20px;
+  width: 20px;
+  background-color: #1538F5;
+  border-radius: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  box-sizing:border-box;
+	display: inline-block;
+  padding: 0px 6px;
+}
+
+.collection__avatar {
+  width: 80px;
+  height: 80px; 
+}

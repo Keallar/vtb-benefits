@@ -1,0 +1,9 @@
+.notifications__row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.notifications__col {
+  display: flex;
+  flex-flow: column nowrap; 
+}

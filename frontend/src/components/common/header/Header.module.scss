@@ -1,0 +1,40 @@
+.header {
+  border: none;
+  padding: 5px 0px;
+  background-color: #fff;
+}
+
+.header__content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.links {
+  text-transform: uppercase;
+  margin: 0 38px;
+  font-weight: 400;
+  outline: none;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+a:active {
+  color: #fff;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.logo {
+  font-weight: 700;
+  color: rgba(21, 56, 245, 1);
+  a {
+    text-decoration: none;
+  }
+}
